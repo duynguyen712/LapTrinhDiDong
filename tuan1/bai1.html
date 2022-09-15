@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var labelA = document.createElement('label');
+        labelA.innerHTML = 'So a: ';
+        document.body.appendChild(labelA);
+
+        var inputA = document.createElement('input');
+        inputA.setAttribute('placeholder', 'Nhap so a');
+        document.body.appendChild(inputA);
+        document.body.appendChild(document.createElement('br'));
+
+        var labelB = document.createElement('label');
+        labelB.innerHTML = "So b: ";
+        document.body.appendChild(labelB);
+
+        var inputB = document.createElement('input');
+        inputB.setAttribute('placeholder', 'Nhap so b');
+        document.body.appendChild(inputB);
+        document.body.appendChild(document.createElement('br'));
+
+        var button = document.createElement('button');
+        button.innerText = "Ket qua";
+        document.body.appendChild(button);
+        document.body.appendChild(document.createElement('br'));
+
+        button.onclick = function() {
+            var a = inputA.value;
+            var b = inputB.value;
+            var kq = a*1 + b*1;
+
+            document.body.appendChild(document.createElement('br'));
+            var ketqua = document.createElement('span');
+            ketqua.innerHTML = 'Ket qua: ' + kq;
+            document.body.appendChild(ketqua);
+        }
+    </script>
+</body>
+</html>
